@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: storage-server-2
+  labels:
+    app: storage-server-2
+spec:
+  containers:
+  - name: storage-server-2
+    image: ubuntu:latest
+    command: ["/bin/sleep", "3650d"]
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+  dnsPolicy: "None"
+  dnsConfig:
+    nameservers:
+    - 8.8.8.8
