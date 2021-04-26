@@ -16,7 +16,7 @@ if __name__ == '__main__':
     subprocess.run('apt-get update', shell=True)
     subprocess.run('apt-get install -y kubelet kubeadm kubectl', shell=True)
     subprocess.run('apt-mark hold kubeadm kubelet kubectl', shell=True)
-    subprocess.run('hostnamectl set-hostname master-node', shell=True)
+    subprocess.run('hostnamectl set-hostname master01', shell=True)
     subprocess.run('kubeadm init --pod-network-cidr=192.168.0.0/16', shell=True)
     subprocess.run('mkdir -p $HOME/.kube', shell=True)
     subprocess.run('cp -i /etc/kubernetes/admin.conf $HOME/.kube/config', shell=True)
