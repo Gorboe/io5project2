@@ -17,4 +17,4 @@ if __name__ == '__main__':
     subprocess.run('apt-get update', shell=True)
     subprocess.run('apt-get install -y kubelet kubeadm kubectl', shell=True)
     subprocess.run('apt-mark hold kubeadm kubelet kubectl', shell=True)
-    #subprocess.run('hostnamectl set-hostname ' + str(sys.argv[1]), shell=True)
+    subprocess.run('hostnamectl set-hostname ' + str(sys.argv[1]), shell=True)
