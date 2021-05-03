@@ -4,6 +4,10 @@ global {
 
 host kubernetes-worker01 {
     openstack {
+        user_data {
+            apt-get update
+            git clone https://github.com/Gorboe/io5project2.git
+        }
         image Ubuntu 18.04
         flavor m1.large
         keypair master
